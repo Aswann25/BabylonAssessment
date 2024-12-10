@@ -1,9 +1,7 @@
-import * as BABYLON from '@babylonjs/core'
-import main from './scenes/main.js'
-const log = console.log
+import { Engine, Scene } from '@babylonjs/core';
+import main from './scenes/main.js';
 
-let engine = new BABYLON.Engine(document.querySelector('canvas'))
-let currentScene = new BABYLON.Scene(engine)
+let engine = new Engine(document.querySelector('canvas'));
+let currentScene = new Scene(engine);
 
-
-await main(BABYLON, engine, currentScene)
+await main(engine, currentScene);
